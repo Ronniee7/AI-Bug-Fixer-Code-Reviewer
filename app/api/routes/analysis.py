@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException, Query
+
 from app.core.config import get_settings
 from app.schemas.analysis import AnalysisResponse
 from app.services.static_analysis_service import StaticAnalysisService

@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from app.core.config import Settings
 from app.services.static_analysis_service import StaticAnalysisService
 
