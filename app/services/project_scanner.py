@@ -130,7 +130,10 @@ class ProjectScanner:
                         Diagnostic(
                             rule_id="PY-RISK-002",
                             severity="high",
-                            message="subprocess.Popen uses shell=True; review command construction.",
+                            message=(
+                                "subprocess.Popen uses shell=True;"
+                              "review command construction."
+                            ),
                             file_path=relative_path,
                             line=node.lineno,
                             evidence="Popen(..., shell=True)",
@@ -141,7 +144,10 @@ class ProjectScanner:
                     Diagnostic(
                         rule_id="PY-QUALITY-001",
                         severity="medium",
-                        message="Bare except catches every exception, including system-exiting exceptions.",
+                        message=(
+                            "Bare except catches every exception,"
+                             "including system-exiting exceptions."
+                        ),
                         file_path=relative_path,
                         line=node.lineno,
                         evidence="except:",

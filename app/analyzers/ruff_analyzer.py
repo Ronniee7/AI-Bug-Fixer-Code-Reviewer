@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import time
 from pathlib import Path
+
 from app.schemas.analysis import Finding, ToolStatus
 
 SEVERITY = {"E": "medium", "F": "high", "W": "low", "I": "low", "B": "medium"}
@@ -48,7 +49,10 @@ class RuffAnalyzer:
                         line=loc.get("row"),
                         column=loc.get("column"),
                         evidence=code,
-                        recommendation="Review the diagnostic; apply an automatic fix only after inspecting the diff.",
+                        recommendation=(
+                            "Review the diagnostic; apply an automatic fix only"
+                             "after inspecting the diff."
+                        ),
                     )
                 )
             return findings, ToolStatus(

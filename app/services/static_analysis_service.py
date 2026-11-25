@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from app.analyzers.bandit_analyzer import BanditAnalyzer
 from app.analyzers.ruff_analyzer import RuffAnalyzer
 from app.core.config import Settings
